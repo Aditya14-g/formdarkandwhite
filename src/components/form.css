@@ -1,0 +1,126 @@
+.Form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 70%;
+    transition: background-color 0.4s; /* Smooth transition */
+}
+
+.form-inside {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    box-shadow: 6px 8px 10px rgb(107, 107, 107);
+    background-color: inherit; /* Use inherited color from Form-box */
+    border-radius: 5px;
+    padding: 20px 10px 10px 20px;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    transition: background-color 0.4s; /* Smooth transition */
+}
+
+.name,
+.email,
+.bday {
+    border-radius: 5px;
+    padding: 8px;
+    outline: none;
+    border: none;
+    background-color: rgb(142, 142, 142);
+    transition: background-color 0.4s; /* Smooth transition */
+}
+
+.name {
+    height: 1rem;
+    width: 8rem;
+    margin-right: 1.2rem;
+}
+
+.email {
+    width: 26rem;
+}
+
+.bday {
+    width: 7rem;
+    color: rgb(98, 98, 98);
+}
+
+label {
+    margin-top: 1rem;
+}
+
+input {
+    -webkit-text-fill-color: rgb(219, 219, 219);
+}
+
+.submit-btn {
+    background-color: black;
+    color: white;
+    width: 8rem;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 8rem;
+    margin-left: 35%;
+    margin-bottom: 2rem;
+    transition: background-color 0.4s; /* Smooth transition */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(227, 227, 227);
+    transition: .4s;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.5); /* Whitish inner shadow */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: black;
+    transition: .4s;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5); /* Inner shadow for the handle */
+}
+
+input:checked + .slider {
+    background-color: black; /* Changes slider background to black */
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5); /* Blackish inner shadow */
+}
+
+input:checked + .slider:before {
+    background-color: white; /* Changes slider handle to white */
+    transform: translateX(26px);
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.5); /* Inner shadow for the handle */
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
